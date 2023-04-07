@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+
+    <title>Request information</title>
+</head>
+<body>
+
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+    <h5 class="my-0 mr-md-auto font-weight-normal">Squeak!</h5>
+
+    <form class="form-inline w-75 mt-2 mt-md-0" method="POST" action="/squeak">
+        <div class="input-group mr-sm-2 w-75">
+            <div class="input-group-prepend">
+                <div class="input-group-text">{{username}}</div>
+            </div>
+            <input type="text" name="squeak" class="form-control" id="squeaktext">
+            <div class="input-group-append">
+
+                <select class="custom-select" name="recipient" id="recipient">
+                    <option value="all" selected>@ Everyone</option>
+                    {{#users}}
+                    <option value="{{username}}">@ {{username}}</option>
+                    {{/users}}
+                      <!--  <option value="H. Curry">@ H. Curry</option> -->
+                </select>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary mr-sm-2">Squeak!</button>
+    </form>
+
+    <form class="form-inline mt-2 mt-md-0">
+        <button type="button" class="btn btn-primary" onclick="signout(this)">Sign out</button>
+    </form>
+</div>
+
+<div class="container">
+
+    <h4>Squeaks</h4>
+
+        {{#squeaks}}
+            <div class="card mb-2">
+                <div class="card-header">
+                    {{name}}
+                    <span class="float-right">{{time}}</span>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">{{squeak}}</p>
+                </div> 
+           </div>
+        {{/squeaks}}
+
+    <hr>
+
+    <h4>Squeals</h4>
+
+        {{#squeals}}
+            <div class="card mb-2">
+                <div class="card-header">
+                   {{name}}
+                   <span class="float-right">{{time}}</span>
+                </div>
+                <div class="card-body">
+                   <p class="card-text">{{squeak}}</p>
+                </div> 
+            </div>
+        {{/squeals}}
+
+
+</div>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/squeak.js"></script>
+</body>
+</html>

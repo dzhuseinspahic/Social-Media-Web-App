@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+
+    <title>Request information</title>
+</head>
+<body>
+
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+    <h5 class="my-0 mr-md-auto font-weight-normal">Squeak!</h5>
+    <form class="form-inline mt-2 mt-md-0">
+        <input type="text" class="form-control mr-sm-2" id="username" placeholder="Name">
+        <input type="password" class="form-control mr-sm-2" id="password" placeholder="Password">
+        <button type="button" onclick="signin(this);" class="btn btn-primary">Sign in</button>
+    </form>
+</div>
+
+<div class="container">
+
+    <div class="row mt-5 offset-4 col-8">
+        <h2>Sign up to Squeak!</h2>
+    </div>
+
+    <form class="mt-2">        
+        <div class="form-group offset-4 row">
+            <div class="col-6">
+                <input type="text" class="form-control" id="signupusername" placeholder="Name">
+                <div class="invalid-feedback">
+                    Please choose a valid username.
+                </div>
+            </div>
+
+        </div>
+
+        <div class="form-group offset-4 row">
+            <div class="col-6">
+                <input type="password" class="form-control" id="signuppassword" placeholder="Password">
+                <div class="invalid-feedback">
+                    Please choose a valid password.
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form-group offset-4 row">
+            <div class="col-8">
+                <button onclick="signup(this);" type="button" class="btn btn-primary">Sign up!</button>
+
+            </div>
+
+        </div>
+    </form>
+
+</div>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/squeak.js"></script>
+</body>
+</html>
